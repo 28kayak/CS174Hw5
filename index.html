@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>L'entract</title>
+</head>
+<body>
+
+<div id="nav">
+     <ul>
+         <li><a href="#about">About</a></li>
+         <li><a href="#Bussiness-Hour">Bussiness Hour</a></li>
+         <li><a href="#Menu">Menu</a></li>
+         <li><a href="#location">Location</a></li>
+
+
+     </ul>
+</div>
+
+
+
+
+<div id="page1">
+  <a id="about" class="smooth"></a>
+  <p>About page content goes here.</p>
+</div>
+
+<div id="page2">
+  <a id="portfolio" class="smooth"></a>
+    Portfolio page content goes here.
+</div>
+
+<div id="page3">
+  <a id="contact" class="smooth"></a>
+    Contact page content goes here.
+</div>
+<div id="page4">
+  <a id="location" class="smooth"></a>
+  <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+  <div style='overflow:hidden;height:400px;width:520px;'>
+    <div id='gmap_canvas' style='height:400px;width:520px;'></div>
+    <style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
+  </div> <a href='http://maps-generator.com/it'>Pagina principale</a>
+  <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=48fb00e165ce041424725616b4dc672dc1d7ca87'></script>
+  <script type='text/javascript'>
+  function init_map(){var myOptions = {zoom:12,center:new google.maps.LatLng(35.5096362,139.61492369999996),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(35.5096362,139.61492369999996)});infowindow = new google.maps.InfoWindow({content:'<strong>Restrunt</strong><br>横浜市港北区新横浜2-15-4 新横浜ラントラクト<br>222-0033 Yokohama<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
+  </script>
+</div>
+
+</body>
+</html>
