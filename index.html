@@ -1,50 +1,184 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="styles/index.css">
 	<title>L'entract</title>
 </head>
 <body>
-
-<div id="nav">
+<div id="header">
+  <div id="nav">
      <ul>
-         <li><a href="#about">About</a></li>
-         <li><a href="#Bussiness-Hour">Bussiness Hour</a></li>
-         <li><a href="#Menu">Menu</a></li>
-         <li><a href="#location">Location</a></li>
+         <a href="#about">About</a>
+         <a href="#bussiness-hour">Bussiness Hour</a>
+         <a href="#menu">Menu</a>
+         <a href="#location">Location</a>
+
+         <a href="views/elements/reward.html">Reward</a>
+         <span style="word-spacing:normal; color:white; font-family:'Annie Use Your Telescope', arial, serif; font-size:20px;">
+           Click a link
+        </span>
 
 
      </ul>
+  </div>
 </div>
-
-
 
 
 <div id="page1">
   <a id="about" class="smooth"></a>
-  <p>About page content goes here.</p>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h1>About</h1>
+  <div class="intro-container">
+    <h3 >L'entract Has Relaxed And Friendly Atomosphere.</h3>
+    <p>
+      Every dish is a wonder to behold,<br>
+      a perfect combination of ingredients as a celebration of the seasons.
+    </p>
+  </div>
+
+
+
 </div>
 
 <div id="page2">
-  <a id="portfolio" class="smooth"></a>
-    Portfolio page content goes here.
+  <a id="bussiness-hour" class="smooth"></a>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h1>Bussiness Hours</h1>
+
+  <p></p>
 </div>
 
 <div id="page3">
-  <a id="contact" class="smooth"></a>
-    Contact page content goes here.
+  <a id="menu" class="smooth"></a>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h1>Menu</h1>
+  <p>  </p>
+  <div class="weeklySpecials">
+    <h2>Weekly Specials</h2>
+    <table class="style-table"  align="center">
+        <tr>
+            <td>
+                <div class="img">
+                    <a target="_blank" href="resources/0280_2425_ph3.jpg">
+                        <img src="resources/0280_2425_ph3.jpg" alt="Fjords" width="300" height="200">
+
+                    </a>
+                    <div class="desc">
+                        <p>Add a description of the image here</p>
+                    </div>
+                </div>
+            </td>
+
+            <td>
+                <div class="img">
+                    <a target="_blank" href="resources/1731_3134_ph4.jpg">
+                        <img src="resources/1731_3134_ph4.jpg" alt="Fjords" width="300" height="200">
+                    </a>
+                    <div class="desc">
+                        <p>Add a description of the image here</p>
+                    </div>
+                </div>
+            </td>
+<!--
+            <td>
+                <div class="img">
+                    <a target="_blank" href="italian-landscape-mountains-nature.jpg">
+                        <img src="italian-landscape-mountains-nature.jpg" alt="Fjords" width="300" height="200">
+                    </a>
+                    <div class="desc">
+                        <p> Add a description of the image here</p>
+                    </div>
+                </div>
+            </td>
+-->
+        </tr>
+    </table>
+  </div>
+  <div class="seasonalItem">
+    <h2>Seasonal Items</h2>
+    <table class="style-table"  align="center">
+        <tr>
+            <td>
+                <div class="img">
+                    <a target="_blank" href="resources/images.jpg">
+                        <img src="resources/images.jpg" alt="Fjords" width="300" height="200">
+
+                    </a>
+                    <div class="desc">
+                        <p>Add a description of the image here</p>
+                    </div>
+                </div>
+            </td>
+
+            <td>
+                <div class="img">
+                    <a target="_blank" href="resources/s_00bl.jpg">
+                        <img src="resources/s_00bl.jpg" alt="Fjords" width="300" height="200">
+                    </a>
+                    <div class="desc">
+                        <p>Add a description of the image here</p>
+                    </div>
+                </div>
+            </td>
+          </tr>
+      </table>
+
+
+  </div>
 </div>
 <div id="page4">
   <a id="location" class="smooth"></a>
-  <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
-  <div style='overflow:hidden;height:400px;width:520px;'>
-    <div id='gmap_canvas' style='height:400px;width:520px;'></div>
-    <style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
-  </div> <a href='http://maps-generator.com/it'>Pagina principale</a>
-  <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=48fb00e165ce041424725616b4dc672dc1d7ca87'></script>
-  <script type='text/javascript'>
-  function init_map(){var myOptions = {zoom:12,center:new google.maps.LatLng(35.5096362,139.61492369999996),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(35.5096362,139.61492369999996)});infowindow = new google.maps.InfoWindow({content:'<strong>Restrunt</strong><br>横浜市港北区新横浜2-15-4 新横浜ラントラクト<br>222-0033 Yokohama<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
-  </script>
-</div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h1>Store Location</h1>
+  <div class="map">
+    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+    <div style='overflow:hidden;height:440px;width:700px;'>
+      <div id='gmap_canvas' style='height:440px;width:700px;'></div>
+      <style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
+    </div> <a href='http://maps-generator.com/it'>Pagina principale</a>
+    <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=48fb00e165ce041424725616b4dc672dc1d7ca87'></script>
+    <script type='text/javascript'>
+    function init_map(){
+      var myOptions = {zoom:12,center:new google.maps.LatLng(35.5096362,139.61492369999996),mapTypeId: google.maps.MapTypeId.ROADMAP};//Json
+
+        map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+        marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(35.5096362,139.61492369999996)});
+        infowindow = new google.maps.InfoWindow({content:'<strong>Restrunt L\'entract</strong><br>横浜市港北区新横浜2-15-4 新横浜ラントラクト<br>222-0033<br>'});
+        google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});
+        infowindow.open(map,marker);}//init_map
+        google.maps.event.addDomListener(window, 'load', init_map);
+    </script>
+  </div><!-- End of map-->
+</div><!--End of Page4-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://github.com/kswedberg/jquery-smooth-scroll/blob/master/jquery.smooth-scroll.min.js"></script>
+<script>
+$('a.smooth').on('click', function() {
+    $.smoothScroll({
+        scrollElement: $('body'),
+        scrollTarget: '#' + this.id
+    });
+
+    return false;
+});
+
+
+
+</script>
 
 </body>
+
 </html>
