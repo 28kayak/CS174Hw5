@@ -1,0 +1,9 @@
+body{
+	background-image: url(../resources/sp0020o.jpg);
+	opacity: 1.0;
+    filter: alpha(opacity=40);
+    z-index: -1;
+}
+.format{
+	color: black;
+}

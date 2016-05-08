@@ -1,0 +1,1 @@
+1)Get email address from "rewad form" then sent an test email to the email 
