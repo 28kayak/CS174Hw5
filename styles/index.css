@@ -53,8 +53,13 @@ a:hover { text-decoration:underline;}
   background-image: url(../resources/bg_top_2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  text-align: center;
 
   height:1000px;
+}
+.buss
+{
+
 }
 #page3{
   background-image: url(../resources/kst0014gb.jpg);
