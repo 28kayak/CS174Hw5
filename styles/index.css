@@ -24,7 +24,7 @@ a {
 a:hover { text-decoration:underline;}
 #page1{
   background-color:yellow;
-  height: 675px;
+  height: 700px;
 
   background-image: url(../resources/bg_top_1.jpg);
   background-size: cover;
@@ -34,8 +34,8 @@ a:hover { text-decoration:underline;}
   width: 300px;
   height: 100px;
 
-  //padding-left: 65%;
-  //padding-top: 5%;
+  padding-left: 65%;
+  padding-top: 5%;
   color: white;
   border: 5px solid black;
   padding: 50px;
@@ -48,15 +48,22 @@ a:hover { text-decoration:underline;}
 }
 
 #page2{
+  color: white;
   background-color: blue;
+  background-image: url(../resources/bg_top_2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+
   height:1000px;
 }
 #page3{
-  background-color: red;
+  background-image: url(../resources/kst0014gb.jpg);
+  background-repeat:repeat;
   height: 1000px;
 }
 #page4{
   background-color: green;
+  background-image: url(../resources/yoko_sn_72.jpg);
   height: 1000px;
 }
 .page-padding {height:90px; width:100%;}

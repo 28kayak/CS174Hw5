@@ -2,22 +2,26 @@
 <html>
 <head>
 	<title>Your Reward</title>
+	<link rel="stylesheet" type="text/css" href="../../styles/reward.css">
 </head>
 <body>
   <h1>Here is your reward</h1>
-	<form action="action_page.php">
+  	<div class="format">
+	<form action="http://localhost/Hw5/controllers/reward.php" method="POST">
 		<fieldset>
-			<legend>Personal information:</legend>
+			<legend>Reward information:</legend>
  				Email Address:<br>
  				<input type="text" name="email" value="Email Address"><br>
  				<br>
-			  Reward Type:<br>
- 			<select>
-  			<option value="balance">Rewards Balance </option>
+			 Reward Type:<br>
+ 			<select name="reward" >
+  			<option value="balance" selected="true">Rewards Balance </option>
   			<option value="coupon">Rewards Coupon </option>
  			</select>
 		<input type="submit" value="GO">
 		</fieldset>
+	</form>
+	</div>	
 
 </form>
 </body>
