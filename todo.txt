@@ -1,1 +1,28 @@
 1)Get email address from "rewad form" then sent an test email to the email 
+
+
+
+
+2)create aaa.php file with _("str") or gettext("str") where str will be translated.
+3)xgettext aaa.php ==> to obtain, messages.po(filename is given in aaa.php)
+4)See line 21-23 in index_en.php
+5)store messages.po under local dir
+6)edit message.po
+6-1) change charset 
+	"Content-Type: text/plain; charset=CHARSET\n" ==> "Content-Type: text/plain; charset=UTF-8\n" or utf-8
+6-2) make dictionary 
+#: index_en.php:37
+msgid "About"
+msgstr "にほんご"
+
+#: index_en.php:38
+msgid "Bussiness Hour"
+msgstr "にほんご"
+
+#: index_en.php:39 index_en.php:89
+msgid "Menu"
+msgstr ""
+
+#: index_en.php:40
+msgid "Location"
+msgstr ""

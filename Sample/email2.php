@@ -7,7 +7,7 @@
    <body>
       
       <?php
-         $to = "kaya.ota@gmail.com ";
+         $to = "kaya.ota@gmail.com";
          $subject = "This is subject";
          
          $message = "<b>This is HTML message.</b>";

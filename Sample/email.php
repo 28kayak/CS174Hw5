@@ -10,7 +10,7 @@
          
  $header = "From:kaya_ota@msn.com \r\n";
  $header .= "Cc:kaya.ota@sjsu.edu \r\n";
- $header = "MIME-Version: 1.0\r\n";
+ $header .= "MIME-Version: 1.0\r\n";
  $header .= "Content-type: text/html\r\n";
          
  $retval = mail ($to,$subject,$message,$header);
