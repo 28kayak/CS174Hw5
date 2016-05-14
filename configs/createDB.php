@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-
+$dbname = "Hw5";
 // Create connection
 $conn = new mysqli($servername, $username, $password);
 // Check connection
@@ -12,14 +12,32 @@ if ($conn->connect_error) {
     echo "Connection failed" . $conn->connect_error;
 }
 else{
-  echo "OK to connect<br>";
-  echo "call create DB()";
+  echo "<br>OK to connect<br>";
+  echo "<br>call create DB()";
   createDB($conn);
-
 }
+echo "<br>before closing db <br>";
+$conn->close();
 
-//dropDB($conn);
 
+//CREATE TABLES
+$conn = new mysqli($servername, $username, $password,$dbname);
+// Check connection
+if ($conn->connect_error) 
+{
+    die("Connection failed: " . $conn->connect_error);
+    echo "Connection failed" . $conn->connect_error;
+}
+else
+{
+  echo "<br>OK to connect<br>";
+  echo "<br>call create Patron()<br>";
+  createPATRON($conn);
+  echo "<br>call create MENU()<br>";
+  createMenu($conn);
+   echo "<br>call create Receipt()<br>";
+  createRECEIPT($conn);
+}
 
 function createDB($conn){
   // Create database
@@ -32,99 +50,61 @@ function createDB($conn){
 
 }//create DB
 
-function createConnection($conn)
-{
-  //$servername = "localhost";
-  //$username = "username";
-  //$password = "password";
-  $dbname = "Hw5";
 
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-
-
-}
-
-function createPATRON(){
+function createPATRON($conn){
   // sql to create table
   $sql = "CREATE TABLE PATRON(
     id INT  AUTO_INCREMENT PRIMARY KEY,
     email VARCHAR(50),
     balance INT
     )";
+
   /*$sql = "CREATE TABLE Users (
     username VARCHAR(30) NOT NULL,
     password VARCHAR(30) NOT NULL,
-    last_in TIMESTAMP )";
+    last_in TIMESTAMP )";*/
 
     if ($conn->query($sql) === TRUE)
     {
-      echo "Table Users created successfully";
-  } else {
+      echo "Table PATRON created successfully";
+    }else 
+    {
       echo "Error creating table: " . $conn->error;
-  }
+    }
 }
-
-/*
-function createImageTable()
+function createMenu($conn)
 {
-    $sql = "CREATE TABLE IMAGE (
-    username VARCHAR(30) NOT NULL,
-    filename VARCHAR(30) NOT NULL,
-    caption VARCHAR(50),
-    reg_date TIMESTAMP )";
-
+  $sql = "CREATE TABLE MENU(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    specials VARCHAR(100)
+    )";
   if ($conn->query($sql) === TRUE)
   {
-    echo "Table Images created successfully";
-  } else {
-    echo "Error creating table: " . $conn->error;
-  }
-}
-function dropDB($conn){
-  $sql = 'DROP DATABASE myDB';
-  if (mysql_query($sql, $conn))
-  {
-    echo "Database myDB was successfully dropped\n";
-  }
-  else
-  {
-    echo 'Error dropping database: ' . mysql_error() . "\n";
-  }//if-else
-}
-
-function createVotingTable()
-{
-  $sql = "CREATE TABLE VOTING (
-    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    rate INT(3) UNSIGNED,
-    username VARCHAR(30) NOT NULL,
-    filename VARCHAR(50) NOT NULL,
-    date VARCHAR(50),
-    reg_date TIMESTAMP )";
-
-
-  /*$sql = "CREATE TABLE Voting(
-    user VARCHAR(30) NOT NULL,
-    filename VARCHAR(50) NOT NULL,
-    rate INT(3)
-  )";
-
-  if ($conn->query($sql) === TRUE)
-  {
-    echo "Table Voting created successfully";
-  } else
+    echo "Table PATRON created successfully";
+  }else 
   {
     echo "Error creating table: " . $conn->error;
   }
 }
-*/
-echo "<br>before closing db <br>";
-$conn->close();
+
+function createRECEIPT($conn)
+{
+  $sql = "CREATE TABLE RECEIPU(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    amount INT,
+    email VARCHAR(50)
+    )";
+  if ($conn->query($sql) === TRUE)
+  {
+    echo "Table PATRON created successfully";
+  }else 
+  {
+    echo "Error creating table: " . $conn->error;
+  }
+}
+
+
+
 
 //reference to connect to mysql from xampp
 //http://hapisupu.com/2015/11/xampp-5-6-14-version-up-fix-no-security/

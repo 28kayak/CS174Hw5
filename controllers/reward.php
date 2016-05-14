@@ -4,23 +4,23 @@ $reward = $_POST["reward"];
 echo "email = ".$email."<br>";
 echo "reward = ".$reward."<br>";
 
-
+$message = "";
 if ($reward == "balance") 
 {
-	$message = "<b>You have reward from L'entract.</b>";
+	$message .= "<b>You have reward from L'entract.</b>";
 	$message .= "<h1>Rewards Type is Balance</h1>";
 }
-else if($reward == "")
+else if($reward == "coupon")
 {
-	$message = "<b>You have reward from L'entract.</b>";
-	$message .= "<h1>Rewards Type is Balance</h1>";
+	$message .= "<b>You have reward from L'entract.</b>";
+	$message .= "<h1>Rewards Type is Coupon</h1>";
 }
 
 $to = $email;
 $subject = "Congraturation! Rewards from L'entract";
          
-$header = "From:kaya_ota@msn.com \r\n";
-$header .= "Cc:kaya.ota@sjsu.edu \r\n";
+$header = "From:kaya.ota@sjsu.edu \r\n";
+//$header .= "Cc:kaya.ota@sjsu.edu \r\n";
 $header .= "MIME-Version: 1.0\r\n";
 $header .= "Content-type: text/html\r\n";
          
