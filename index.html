@@ -150,24 +150,7 @@
   <br>
   <h1>Store Location</h1>
   <div class="map">
-    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
-    <div style='overflow:hidden;height:440px;width:1000px;'>
-      <div id='gmap_canvas' style='height:440px;width:700px;'></div>
-      <style>#gmap_canvas img{max-width:none!important; background:none!important;}</style>
-    </div> <a href='http://maps-generator.com/it'>Pagina principale</a>
-    <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=48fb00e165ce041424725616b4dc672dc1d7ca87'></script>
-    
-    <script type='text/javascript'>
-    function init_map(){
-      var myOptions = {zoom:12,center:new google.maps.LatLng(35.5096362,139.61492369999996),mapTypeId: google.maps.MapTypeId.ROADMAP};//Json
-
-        map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
-        marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(35.5096362,139.61492369999996); });
-        infowindow = new google.maps.InfoWindow({content:'<strong>Restrunt L\'entract</strong><br>横浜市港北区新横浜2-15-4 新横浜ラントラクト<br>222-0033<br>'});
-        google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});
-        infowindow.open(map,marker);}//init_map
-        google.maps.event.addDomListener(window, 'load', init_map);
-    </script>
+    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:440px;width:700px;'><div id='gmap_canvas' style='height:440px;width:700px;'></div><div><small><a href="http://embedgooglemaps.com">                 embed google maps             </a></small></div><div><small><a href="http://www.autohuren.world/">auto huren</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:13,center:new google.maps.LatLng(35.5101889,139.61487369999998),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(35.5101889,139.61487369999998)});infowindow = new google.maps.InfoWindow({content:'<strong>L\'entracte </strong><br>2-15-4 Shin-Yokohama, Kohoku-ku, Yokohama<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
   </div><!-- End of map-->
 </div><!--End of Page4-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>

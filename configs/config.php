@@ -1,3 +1,8 @@
+
+<?php
+header('X-FRAME-OPTIONS: SAMEORIGIN');
+header('X-FRAME-OPTIONS: DENY');
+?>
 <?php
    ob_start();
    session_start();
@@ -9,35 +14,45 @@ $username = "kaya";
 $password = "ota";
 $msg = '';
             
-if (isset($_POST['login']) && !empty($_POST['username'])  && !empty($_POST['password'])) 
+if (!empty($_POST['user'])  && !empty($_POST['ps'])) 
 {
-	if ($_POST['username'] == $username && $_POST['password'] == $password)
+    //echo "if is ture 1";
+	if ($_POST['user'] == $username && $_POST['ps'] == $password)
 	{
         $_SESSION['valid'] = true;
         $_SESSION['timeout'] = time();
         $_SESSION['username'] = 'KAYA';
+        echo "Session Starts ".$_SESSION['username']."<br>";
                 
-        echo 'You have entered valid use name and password';
+        //echo 'You have entered valid user name and password';
+        include("../views/elements/control_pnale.html");
     }else
     {
     	$msg = 'Wrong username or password';
     }
+}else
+{
+    echo "something wrong";
+    echo $_POST['user']."<br>";
+    echo $_POST['ps']."<br>";
+    //echo $_POST['login']."<br>";
+
 }
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-<h1>Here is config.php</h1>
+
+
 <?php
-echo $_SESSION['username']."<br>";
-echo $_SESSION['timeout']."<br>";
-
-
+   session_destroy();
 ?>
-</body>
-</html>
+
+
+
+
+
+
+
+
+
+
 
 

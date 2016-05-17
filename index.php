@@ -1,4 +1,8 @@
 <?php
+header('X-FRAME-OPTIONS: SAMEORIGIN');
+header('X-FRAME-OPTIONS: DENY');
+?>
+<?php
 
 $lang = $_SERVER["HTTP_ACCEPT_LANGUAGE"];
 
@@ -20,12 +24,7 @@ else if ($lang[0] == "ja")
 }
 else
 {
-	include();
+	echo "some thing worng";
 }
-
-
-
-
-
 
  ?>

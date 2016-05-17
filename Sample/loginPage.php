@@ -11,8 +11,7 @@
 <html lang = "en">
    
    <head>
-      <title>Tutorialspoint.com</title>
-      <link href = "css/bootstrap.min.css" rel = "stylesheet">
+         <link href = "css/bootstrap.min.css" rel = "stylesheet">
       
       <style>
          body {
@@ -84,7 +83,7 @@
             if (isset($_POST['login']) && !empty($_POST['username']) 
                && !empty($_POST['password'])) {
 				
-               if ($_POST['username'] == 'tutorialspoint' && 
+               if ($_POST['username'] == 'kaya' && 
                   $_POST['password'] == '1234') {
                   $_SESSION['valid'] = true;
                   $_SESSION['timeout'] = time();
@@ -105,12 +104,12 @@
             ?>" method = "post">
             <h4 class = "form-signin-heading"><?php echo $msg; ?></h4>
             <input type = "text" class = "form-control" 
-               name = "username" placeholder = "username = tutorialspoint" 
+               name = "username" placeholder = "username = kaya" 
                required autofocus></br>
             <input type = "password" class = "form-control"
                name = "password" placeholder = "password = 1234" required>
             <button class = "btn btn-lg btn-primary btn-block" type = "submit" 
-               name = "login">Login</button>
+               name="login">Login</button>
          </form>
 			
          Click here to clean <a href = "logout.php" tite = "Logout">Session.

@@ -1,4 +1,9 @@
 <?php
+header('X-FRAME-OPTIONS: SAMEORIGIN');
+header('X-FRAME-OPTIONS: DENY');
+?>
+
+<?php
 $email = $_POST["email"]; 
 $reward = $_POST["reward"];
 echo "email = ".$email."<br>";
